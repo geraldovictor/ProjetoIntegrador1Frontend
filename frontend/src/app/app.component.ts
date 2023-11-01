@@ -19,6 +19,9 @@ export class AppComponent {
 
   fileChanged(e: any) {
     this.file = e.target.files[0];
+  }
+  
+  uploadFile(e: any){
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
       console.log(fileReader.result);
@@ -28,6 +31,5 @@ export class AppComponent {
       })
     }
     fileReader.readAsText(this.file);
-
   }
 }
