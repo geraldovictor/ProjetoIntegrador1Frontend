@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.principal{
+    height: 400px;
+
+}
+.body{
+    height: 1000px;
+}
+
 .Block{
     display: flex;
     flex-direction: column;
@@ -10,6 +18,10 @@
     width: 300px;
     border: 1px lightgray solid;
     padding: 5px;
+    margin-left: 1600px;
+    border-radius: 20px;
+    border-color: #7C8FF2;
+    border-width: 8px;
 }
 
 #text-input{
@@ -28,12 +40,42 @@
     width: 120px
 }
 
-#input{
-    /* display: none; */
-}
-
 #button{
     align-self: center;
     width: 126px;
     padding: 5px;
+}
+
+.footer{
+    display: flex;
+    margin-top: 320px;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C8FF2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 30px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C8FF2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 30px;
+}
+
+.container{ 
+    text-align: center;
+}
+
+.mini-box{
+    background-color: lightgray;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: 75px;
+    width: 200px;
+    border-radius: 10px;
 }

@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IDadosVoo } from 'src/shared/model/dados-voos.model';
+import { IVoo, IInstante, IEixo } from 'src/shared/model/dados-voos.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-  private apiRoot = 'http://localhost:8000/';
+  private apiRoot = 'http://127.0.0.1:8000/';
 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,13 @@ export class AppService {
     return this.http.get(this.apiRoot.concat('dados-voo/'));
   }
 
-  createDadosVoo(dadosVoo: IDadosVoo) {
-    return this.http.post<IDadosVoo>(this.apiRoot + 'dados-voo/', dadosVoo, { observe: 'response' });
+  createDadosVoo(dadosVoo: IVoo) {
+    return this.http.post<IVoo>(this.apiRoot + 'dados-voo/', dadosVoo, { observe: 'response' });
+  }
+  createInstante(Instante: IInstante) {
+    return this.http.post<IInstante>(this.apiRoot + 'dados-voo/', Instante, { observe: 'response' });
+  }
+  createEixo(Eixo: IEixo) {
+    return this.http.post<IEixo>(this.apiRoot + 'dados-voo/', Eixo, { observe: 'response' });
   }
 }
