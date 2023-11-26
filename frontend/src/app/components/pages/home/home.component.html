@@ -1,0 +1,59 @@
+<h1 style="text-align: center; margin-top: 20px">Projeto Integrador 1 - Lançamento de Foguete</h1>
+  
+<div class="Block">
+  <p id="text-input">Registre um novo lançamento: </p>
+    <label id="lbl" for="input">Escolha o arquivo</label>
+    <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
+    <button id="button" type="submit" (click)="uploadFile($event)">Enviar</button>
+</div>
+<br><br>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <button class="mini-box">
+        <h3 routerLink="/voo">Voo 1</h3>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+    </div>
+    <div class="col-sm">
+      <button class="mini-box">
+        <h3 routerLink="/voo/2">Voo 2</h3>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+    </div>
+    <div class="col-sm">
+      <button class="mini-box">
+        <h3 routerLink="/voo/3">Voo 3</h3>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+      <button class="mini-box">
+        <h1>...</h1>
+      </button>
+    </div>
+  </div>
+</div>
+  
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
