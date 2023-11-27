@@ -5,5 +5,11 @@
     background-color: #7C8FF2;
     color: white;
     font-size: 1.2rem;
-    padding: 30px;
+    padding: 10px;
+    height: 12vh;
+}
+
+.header h1{
+    /* text-align: center;
+    margin-top: 20px; */
 }

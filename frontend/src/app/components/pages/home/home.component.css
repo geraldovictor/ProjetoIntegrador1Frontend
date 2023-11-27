@@ -3,12 +3,20 @@
     padding: 0;
 }
 
-.principal{
+/* .principal{
     height: 400px;
 
 }
 .body{
     height: 1000px;
+} */
+
+.main-section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .Block{
@@ -17,11 +25,12 @@
     gap: 10px;
     width: 300px;
     border: 1px lightgray solid;
-    padding: 5px;
-    margin-left: 1600px;
+    padding: 15px;
+    /* margin-left: 1600px; */
+    text-align: center;
     border-radius: 20px;
     border-color: #7C8FF2;
-    border-width: 8px;
+    border-width: 4px;
 }
 
 #text-input{
@@ -44,9 +53,10 @@
     align-self: center;
     width: 126px;
     padding: 5px;
+    cursor: pointer;
 }
 
-.footer{
+/* .footer{
     display: flex;
     margin-top: 320px;
     justify-content: center;
@@ -65,7 +75,7 @@
     color: white;
     font-size: 1.2rem;
     padding: 30px;
-}
+} */
 
 .container{ 
     text-align: center;
