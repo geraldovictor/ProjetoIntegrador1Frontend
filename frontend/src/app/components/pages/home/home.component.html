@@ -1,9 +1,15 @@
 <div class="main-section">
   <div class="Block">
-    <p id="text-input">Registre um novo lançamento: </p>
+    <p id="text-input">Registre um novo voo: </p>
       <label id="lbl" for="input">Escolha o arquivo</label>
       <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
-      <button id="button" type="submit" (click)="uploadFile($event)">Enviar</button>
+      <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button>
+  </div>
+  <div class="Block">
+    <p id="text-input">Registre um novo instante: </p>
+      <label id="lbl" for="input">Escolha o arquivo</label>
+      <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
+      <button id="button" type="submit" (click)="uploadFileInstante($event)">Enviar</button>
   </div>
   <br><br>
   
