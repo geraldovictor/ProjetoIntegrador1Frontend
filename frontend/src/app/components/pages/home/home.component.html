@@ -1,9 +1,22 @@
 <div class="main-section">
   <div class="Block">
     <p id="text-input">Registre um novo voo: </p>
-      <label id="lbl" for="input">Escolha o arquivo</label>
+    <form>
+      <label for="volume">Volume</label>
+      <input (change)="volumeChanged($event)" id="volume" type="text">
+      <label  for="pressao">Pressão Inicial</label>
+      <input (change)="pressaoChanged($event)" id="pressao" type="text">
+      <label  for="perssaoBomba">Pressão Bomba</label>
+      <input (change)="pressaoBombaChanged($event)" id="pressaoBomba" type="text">
+      <label  for="peso">Peso do Foguete</label>
+      <input (change)="pesoChanged($event)" id="peso" type="text">
+      <label  for="angulo">Ângulo de Lançamentos</label>
+      <input (change)="anguloChanged($event)" id="angulo" type="text">
+      <button type="button" (click)="uploadInput($event)"> Enviar</button>
+    </form>
+      <!-- <label id="lbl" for="input">Escolha o arquivo</label>
       <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
-      <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button>
+      <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button> -->
   </div>
   <div class="Block">
     <p id="text-input">Registre um novo instante: </p>
