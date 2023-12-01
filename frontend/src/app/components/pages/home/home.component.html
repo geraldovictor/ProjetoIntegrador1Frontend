@@ -1,32 +1,44 @@
 <div class="main-section">
-  <div class="Block">
-    <p id="text-input">Registre um novo voo: </p>
-    <form>
-      <label for="volume">Volume</label>
-      <input (change)="volumeChanged($event)" id="volume" type="text">
-      <label  for="pressao">Pressão Inicial</label>
-      <input (change)="pressaoChanged($event)" id="pressao" type="text">
-      <label  for="perssaoBomba">Pressão Bomba</label>
-      <input (change)="pressaoBombaChanged($event)" id="pressaoBomba" type="text">
-      <label  for="peso">Peso do Foguete</label>
-      <input (change)="pesoChanged($event)" id="peso" type="text">
-      <label  for="angulo">Ângulo de Lançamentos</label>
-      <input (change)="anguloChanged($event)" id="angulo" type="text">
-      <button type="button" (click)="uploadInput($event)"> Enviar</button>
-    </form>
-      <!-- <label id="lbl" for="input">Escolha o arquivo</label>
+  <div class="input-section">
+    <div class="Block">
+      <p id="text-input">Registre um novo voo: </p>
+      <form id="voo-form">
+        <div class="volume">
+          <label for="volume">Volume</label>
+          <input (change)="volumeChanged($event)" id="volume" type="text">
+        </div>
+        <div class="pressao">
+          <label  for="pressao">Pressão Inicial</label>
+          <input (change)="pressaoChanged($event)" id="pressao" type="text">
+        </div>
+        <div class="bomba">
+          <label  for="pressaoBomba">Pressão Bomba</label>
+          <input (change)="pressaoBombaChanged($event)" id="pressaoBomba" type="text">
+        </div>
+        <div class="peso">
+          <label  for="peso">Peso do Foguete</label>
+          <input (change)="pesoChanged($event)" id="peso" type="text">
+        </div>
+        <div class="angulo">
+          <label  for="angulo">Ângulo de Lançamentos</label>
+          <input (change)="anguloChanged($event)" id="angulo" type="text">
+        </div>
+        <button type="button" (click)="uploadInput($event)"> Enviar</button>
+      </form>
+        <!-- <label id="lbl" for="input">Escolha o arquivo</label>
+        <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
+        <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button> -->
+    </div>
+    <div class="Block">
+      <p id="text-input">Registre um novo instante: </p>
+      <label for="voo-select">Selecione o voo:</label>
+      <select id="voo-select">
+        <option *ngFor="let voo of voos_counterRange()" value="{{voo + 1}}">Voo {{voo + 1}}</option>
+      </select>
+      <label id="lbl" for="input">Escolha o arquivo</label>
       <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
-      <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button> -->
-  </div>
-  <div class="Block">
-    <p id="text-input">Registre um novo instante: </p>
-    <label for="voo-select">Selecione o voo:</label>
-    <select id="voo-select">
-      <option *ngFor="let voo of voos_counterRange()" value="{{voo + 1}}">Voo {{voo + 1}}</option>
-    </select>
-    <label id="lbl" for="input">Escolha o arquivo</label>
-    <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
-    <button id="button" type="submit" (click)="uploadFileInstante($event)">Enviar</button>
+      <button id="button" type="submit" (click)="uploadFileInstante($event)">Enviar</button>
+    </div>
   </div>
   <br><br>
   
