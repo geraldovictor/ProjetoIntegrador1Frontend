@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Voo, IVoo, IInstante, Instante } from 'src/shared/model/dados-voos.model';
 import { AppService } from '../../../app.service' ;
 import { HttpResponse } from '@angular/common/http';
@@ -8,7 +8,7 @@ import { HttpResponse } from '@angular/common/http';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   title = 'frontend';
   file: any;
   pressaoInicial: any;
@@ -19,10 +19,28 @@ export class HomeComponent {
   idVoo: any;
   dadosVoo: IVoo = new Voo();
   dadosInstante: IInstante = new Instante();
+  voos_counter: any;
 
 
   constructor(private appService: AppService) {
 
+  }
+
+  ngOnInit(): void {
+    // Call the method to load data when the component is initialized
+    this.appService.getCounterVoo().subscribe(
+      (res: any) => {
+        // Assuming res.body contains the response body
+        this.voos_counter = res.body ? res.body.voo_count : null;
+      },
+      (error) => {
+        console.error('Error loading counter:', error);
+      }
+    );
+  }
+  voos_counterRange(): number[] {
+    const originalArray =  Array.from({ length: this.voos_counter || 0 }, (_, index) => index);
+    return originalArray.reverse();
   }
 
   fileChanged(e: any) {
