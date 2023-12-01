@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IInstante, IVoo} from 'src/shared/model/dados-voos.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class AppService {
 
   getDadosVoo() {
     return this.http.get(this.apiRoot.concat('dados-voo/'));
+  }
+
+  getCounterVoo(): Observable<any> {
+    return this.http.get(this.apiRoot.concat('count-voos/'), { observe: 'response' });
   }
 
   createDadosVoo(dadosVoo: IVoo) {
