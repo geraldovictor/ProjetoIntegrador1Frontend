@@ -23,7 +23,7 @@
           <label  for="angulo">Ângulo de Lançamentos</label>
           <input (change)="anguloChanged($event)" id="angulo" type="text">
         </div>
-        <button type="button" (click)="uploadInput($event)"> Enviar</button>
+        <button type="submit" (click)="uploadInput($event)"> Enviar</button>
       </form>
         <!-- <label id="lbl" for="input">Escolha o arquivo</label>
         <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
@@ -32,8 +32,8 @@
     <div class="Block">
       <p id="text-input">Registre um novo instante: </p>
       <label for="voo-select">Selecione o voo:</label>
-      <select id="voo-select">
-        <option *ngFor="let voo of voos_counterRange()" value="{{voo + 1}}">Voo {{voo + 1}}</option>
+      <select id="voo-select" [(ngModel)]="selectedVoo">
+        <option *ngFor="let voo of voos_counterRange()" [value]="voo + 1">Voo {{ voo + 1 }}</option>
       </select>
       <label id="lbl" for="input">Escolha o arquivo</label>
       <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">

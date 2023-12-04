@@ -64,6 +64,7 @@
 #voo-form button{
     height: 30px;
     align-self: self-end;
+    cursor: pointer;
 }
 
 #lbl{

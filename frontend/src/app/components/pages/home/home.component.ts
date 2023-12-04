@@ -3,6 +3,7 @@ import { Voo, IVoo, IInstante, Instante } from 'src/shared/model/dados-voos.mode
 import { AppService } from '../../../app.service' ;
 import { HttpResponse } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit{
   dadosVoo: IVoo = new Voo();
   dadosInstante: IInstante = new Instante();
   voos_counter: any;
+  selectedVoo: any;
 
 
   constructor(private appService: AppService) {
@@ -94,10 +96,13 @@ export class HomeComponent implements OnInit{
   //   fileReader.readAsText(this.file);
   // }
   uploadFileInstante(e: any){
+    console.log(this.selectedVoo)
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
-      console.log(fileReader.result);
+      // console.log(fileReader.result);
       this.dadosInstante = JSON.parse(fileReader.result as string);
+      console.log(this.dadosInstante);
+      this.dadosInstante.idVoo = this.selectedVoo;
       this.appService.createInstanteVoo(this.dadosInstante).subscribe((res: HttpResponse<IInstante>) => {
         this.dadosInstante = !!res.body ? res.body : this.dadosInstante;
       })
