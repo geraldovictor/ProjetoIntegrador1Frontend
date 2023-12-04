@@ -96,10 +96,8 @@ export class HomeComponent implements OnInit{
   //   fileReader.readAsText(this.file);
   // }
   uploadFileInstante(e: any){
-    console.log(this.selectedVoo)
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
-      // console.log(fileReader.result);
       this.dadosInstante = JSON.parse(fileReader.result as string);
       console.log(this.dadosInstante);
       this.dadosInstante.idVoo = this.selectedVoo;
