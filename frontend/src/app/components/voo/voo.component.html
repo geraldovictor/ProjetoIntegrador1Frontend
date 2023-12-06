@@ -1,4 +1,31 @@
-<h1 style="text-align: center; margin-top: 20px">Voo 1</h1>
+<h1 style="text-align: center; margin-top: 20px">Voo {{id}}</h1>
+
+<table>
+  <col>
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th scope="col">...</th>
+    <th *ngFor="let instante of instantes" scope="col">{{ instante.idInstante }}</th>
+  </tr>
+  <tr>
+    <th scope="row">Tempo</th>
+    <td *ngFor="let instante of instantes">{{ instante.tempo }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Latitude</th>
+    <td *ngFor="let instante of instantes">{{ instante.latitude }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Longitude</th>
+    <td *ngFor="let instante of instantes">{{ instante.longitude }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Altitude</th>
+    <td *ngFor="let instante of instantes">{{ instante.altitude }}</td>
+  </tr>
+</table>
+
+
 
 <section class="dados">
   <div class="variaveis"></div>
@@ -6,7 +33,6 @@
     <div class="dado-var"></div>
     <div class="dado-var"></div>
     <div class="dado-var"></div>
-    <app-table></app-table>
   <div class="estáticos">
     <div class="dado-est">Peso: {{ peso }} kg</div> 
     <div class="dado-est">Pressão: {{ pressao }} kgf m</div> 

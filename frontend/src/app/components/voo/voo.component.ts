@@ -13,6 +13,7 @@ export class VooComponent implements OnInit {
   peso: any; 
   pressao: any;
   angulo: any;
+  instantes: any;
   id: any;
 
   constructor(private route: ActivatedRoute, private appService: AppService) {}
@@ -27,6 +28,12 @@ export class VooComponent implements OnInit {
       },
       (error) => {
         console.error('Error loading counter:', error);
+      }
+    )
+    this.appService.getInstanteByVoo(this.id).subscribe(
+      (res:any) => {
+        this.instantes = res;
+        console.log(this.instantes);
       }
     )
 }

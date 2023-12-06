@@ -21,6 +21,10 @@ export class AppService {
     return this.http.get(this.apiRoot.concat('dados-voo/' + id + '/'));
   }
 
+  getInstanteByVoo(id:any) {
+    return this.http.get(this.apiRoot.concat('instantes-by-voo/' + id + '/ '))
+  }
+
   getCounterVoo(): Observable<any> {
     return this.http.get(this.apiRoot.concat('count-voos/'), { observe: 'response' });
   }

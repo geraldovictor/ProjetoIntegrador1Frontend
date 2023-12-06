@@ -9,7 +9,6 @@ import { VooComponent } from './components/voo/voo.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { TableComponent } from './components/table/table.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    TableComponent
   ],
   imports: [
     BrowserModule,
