@@ -17,7 +17,7 @@ export class AppService {
     return this.http.get(this.apiRoot.concat('dados-voo/'));
   }
 
-  getSpecificVoo(id: any) : Observable<any> {
+  getSpecificVoo(id: any)  {
     return this.http.get(this.apiRoot.concat('dados-voo/' + id + '/'));
   }
 
