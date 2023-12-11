@@ -1,20 +1,28 @@
+.body{
+    background: linear-gradient(
+        90deg,
+        rgb(45, 193, 45) 0%
+        rgb(123,193, 77) 100%
+    );
+} 
+
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 /* .principal{
     height: 400px;
 
-}
-.body{
-    height: 1000px;
-} */
+}*/
+
 
 .main-section{
-    margin-top: 30px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
+    
     /* justify-content: center; */
     /* align-items: center; */
 }
@@ -27,8 +35,8 @@
 .Block{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 400px;
+    gap: 80px;
+    width: 600px;
     border: 1px lightgray solid;
     padding: 15px;
     /* margin-left: 1600px; */
@@ -36,46 +44,54 @@
     border-radius: 20px;
     border-color: #7C8FF2;
     border-width: 4px;
+    margin: 0 auto;
 }
 
 #text-input{
     align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    
+}
+
+#voo-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 #voo-form{
-    display: grid;
+    display: flex;
     flex-direction: column;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
+    align-items: center;
 }
 
 #voo-form label{
-    height: 30px;
-    width: 100px;
-    line-height: 1;
+    width: 150px;
+    line-height: 1.5;
 }
 
 #voo-form input{
-    height: 30px;
-    width: 100px;
+    width: 100%;
 }
 
 #voo-form button{
-    height: 30px;
-    align-self: self-end;
+    width: 126px;
+    padding: 5px;
+    align-self: center;
     cursor: pointer;
 }
 
 #lbl{
     align-self: center;
     text-align: center;
-    font-size: .8rem;
+    font-size: 1rem;
     border: 1px solid black;
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    width: 120px
+    width: 150px;
 }
 
 #button{
@@ -114,7 +130,8 @@
     background-color: white;
     padding: 10px;
     margin-top: 40px;
-    margin-left: 75px;
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 80px;
     border-radius: 20px;
