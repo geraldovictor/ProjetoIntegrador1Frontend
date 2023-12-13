@@ -18,6 +18,8 @@
     flex-direction: column;
     margin-bottom: 100px;
     
+    
+    
     /* justify-content: center; */
     /* align-items: center; */
 }
@@ -25,6 +27,7 @@
 .input-section{
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .Block{
@@ -38,8 +41,15 @@
     text-align: center;
     border-radius: 20px;
     border-color: #7C8FF2;
+    /* color: white; */
     border-width: 4px;
     margin: 0 auto;
+    background: linear-gradient(
+        90deg,
+        rgba(174, 193, 255, 1) 0%,
+        rgba(174, 66, 255, 1) 100%
+    );
+    
 }
 
 #text-input{
@@ -87,6 +97,7 @@
     border-radius: 5px;
     cursor: pointer;
     width: 150px;
+    
 }
 
 #button{
@@ -94,6 +105,7 @@
     width: 126px;
     padding: 5px;
     cursor: pointer;
+    
 }
 
 /* .footer{
@@ -119,6 +131,7 @@
 
 .container{ 
     text-align: center;
+    
 }
 
 .mini-box{
@@ -131,4 +144,5 @@
     height: 80px;
     border-radius: 20px;
     border-color:black;
+    
 }
