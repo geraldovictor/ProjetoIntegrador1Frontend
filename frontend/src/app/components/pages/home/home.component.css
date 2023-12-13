@@ -6,12 +6,6 @@
     );
 } 
 
-*{
-    margin: 0;
-    padding: 0;
-    
-}
-
 /* .principal{
     height: 400px;
 
@@ -22,6 +16,7 @@
     margin-top: 100px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
     
     /* justify-content: center; */
     /* align-items: center; */

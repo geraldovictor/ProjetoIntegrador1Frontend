@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit{
   idVoo: any;
   dadosVoo: IVoo = new Voo();
   dadosInstante: IInstante = new Instante();
+  instanteDados: any;
   voos_counter: any;
   selectedVoo: any;
 
@@ -98,6 +99,7 @@ export class HomeComponent implements OnInit{
   uploadFileInstante(e: any){
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
+      console.log(fileReader.result as string)
       this.dadosInstante = JSON.parse(fileReader.result as string);
       console.log(this.dadosInstante);
       this.dadosInstante.idVoo = this.selectedVoo;
@@ -107,4 +109,18 @@ export class HomeComponent implements OnInit{
     }
     fileReader.readAsText(this.file);
   }
+
+//   uploadFileInstante(e: any){
+//     let fileReader = new FileReader();
+//     fileReader.onload = (e) => {
+//       console.log(fileReader.result as string)
+//       this.instanteDados = fileReader.result as string;
+//       let newInstante = this.selectedVoo + '\n' + this.instanteDados
+//       this.appService.createInstante(newInstante).subscribe(res => {
+//         console.log('Response from Python server:', res);
+//         // this.dadosInstante = !!res.body ? res.body : this.dadosInstante;
+//       })
+//     }
+//     fileReader.readAsText(this.file);
+//   }
 }

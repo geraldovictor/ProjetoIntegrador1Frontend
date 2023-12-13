@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   private apiRoot = 'http://127.0.0.1:8000/';
+  private pythonServerUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
@@ -39,5 +40,9 @@ export class AppService {
 
   createInstanteVoo(dadosInstante: IInstante) {
     return this.http.post<IInstante>(this.apiRoot + 'dados-instante/', dadosInstante, { observe: 'response' });
+  }
+
+  createInstante(dadosInstante: string): Observable<any> {
+    return this.http.post<any>(this.pythonServerUrl, dadosInstante);
   }
 }
