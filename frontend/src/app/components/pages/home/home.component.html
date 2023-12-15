@@ -4,23 +4,23 @@
       <p id="text-input">Registre um novo voo: </p>
       <form id="voo-form">
         <div class="volume">
-          <label for="volume">Volume</label>
+          <label for="volume">Volume (ml)</label>
           <input (change)="volumeChanged($event)" id="volume" type="text">
         </div>
         <div class="pressao">
-          <label  for="pressao">Pressão Inicial</label>
+          <label  for="pressao">Pressão Inicial (psi)</label>
           <input (change)="pressaoChanged($event)" id="pressao" type="text">
         </div>
         <div class="bomba">
-          <label  for="pressaoBomba">Pressão Bomba</label>
+          <label  for="pressaoBomba">Distância (m)</label>
           <input (change)="pressaoBombaChanged($event)" id="pressaoBomba" type="text">
         </div>
         <div class="peso">
-          <label  for="peso">Peso do Foguete</label>
+          <label  for="peso">Peso do Foguete (kg)</label>
           <input (change)="pesoChanged($event)" id="peso" type="text">
         </div>
         <div class="angulo">
-          <label  for="angulo">Ângulo de Lançamento</label>
+          <label  for="angulo">Ângulo de Lançamento (º)</label>
           <input (change)="anguloChanged($event)" id="angulo" type="text">
         </div>
         <button type="submit" (click)="uploadInput($event)"> Enviar</button>

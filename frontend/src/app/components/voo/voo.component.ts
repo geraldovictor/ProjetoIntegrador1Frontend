@@ -13,6 +13,8 @@ export class VooComponent implements OnInit {
   peso: any; 
   pressao: any;
   angulo: any;
+  volume: any;
+  distancia: any;
   instantes: any;
   id: any;
 
@@ -24,7 +26,9 @@ export class VooComponent implements OnInit {
       (res:any) => {
         this.pressao = res ? res.pressaoInicial : null;
         this.peso = res ? res.pesoFoguete : null;
-        this.angulo = res ? res.anguloLancamento : null
+        this.angulo = res ? res.anguloLancamento : null;
+        this.distancia = res ? res.pressaoBomba : null;
+        this.volume = res ? res.volumeinicialAgua : null;
       },
       (error) => {
         console.error('Error loading counter:', error);

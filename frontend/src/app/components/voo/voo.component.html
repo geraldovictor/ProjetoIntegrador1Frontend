@@ -5,12 +5,8 @@
     <col>
     <colgroup span="4"></colgroup>
     <tr>
-      <th scope="col">...</th>
+      <th scope="col">Instante</th>
       <th *ngFor="let instante of instantes; let i = index" scope="col">{{ i + 1 }}</th>
-    </tr>
-    <tr>
-      <th scope="row">Tempo</th>
-      <td *ngFor="let instante of instantes">{{ instante.tempo }}</td>
     </tr>
     <tr>
       <th scope="row">Latitude</th>
@@ -36,8 +32,10 @@
       <div class="dado-var"></div>
     <div class="estáticos">
       <div class="dado-est">Peso: {{ peso }} kg</div>
-      <div class="dado-est">Pressão: {{ pressao }} kgf m</div>
+      <div class="dado-est">Pressão: {{ pressao }} psi</div>
       <div class="dado-est">Ângulo de Lançamento: {{ angulo }} °</div>
+      <div class="dado-est">Distância: {{ distancia }} m</div>
+      <div class="dado-est">Volume: {{ volume }} ml</div>
     </div>
   </section>
 </div>
