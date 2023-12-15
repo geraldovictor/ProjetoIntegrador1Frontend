@@ -1,0 +1,59 @@
+<div class="main-section">
+  <div class="input-section">
+    <div class="Block">
+      <p id="text-input">Registre um novo voo: </p>
+      <form id="voo-form">
+        <div class="volume">
+          <label for="volume">Volume (ml)</label>
+          <input (change)="volumeChanged($event)" id="volume" type="text">
+        </div>
+        <div class="pressao">
+          <label  for="pressao">Pressão Inicial (psi)</label>
+          <input (change)="pressaoChanged($event)" id="pressao" type="text">
+        </div>
+        <div class="bomba">
+          <label  for="pressaoBomba">Distância (m)</label>
+          <input (change)="pressaoBombaChanged($event)" id="pressaoBomba" type="text">
+        </div>
+        <div class="peso">
+          <label  for="peso">Peso do Foguete (kg)</label>
+          <input (change)="pesoChanged($event)" id="peso" type="text">
+        </div>
+        <div class="angulo">
+          <label  for="angulo">Ângulo de Lançamento (º)</label>
+          <input (change)="anguloChanged($event)" id="angulo" type="text">
+        </div>
+        <button type="submit" (click)="uploadInput($event)"> Enviar</button>
+      </form>
+        <!-- <label id="lbl" for="input">Escolha o arquivo</label>
+        <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
+        <button id="button" type="submit" (click)="uploadFileVoo($event)">Enviar</button> -->
+    </div>
+    <div class="Block">
+      <p id="text-input">Registre um novo instante: </p>
+      <label id="voo-select">Selecione o voo:</label>
+      <select id="voo-select" [(ngModel)]="selectedVoo">
+        <option *ngFor="let voo of voos_counterRange()" [value]="voo + 1">Voo {{ voo + 1 }}</option>
+      </select>
+      <label id="lbl" for="input">Escolha o arquivo</label>
+      <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
+      <button id="button" type="submit" (click)="uploadFileInstante($event)">Enviar</button>
+    </div>
+  </div>
+  <br><br>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" *ngFor="let voo of voos_counterRange()">
+        <button class="mini-box">
+          <h3 [routerLink]="'/voo/' + (voo + 1)">
+            Voo {{ voo + 1 }}
+          </h3>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">

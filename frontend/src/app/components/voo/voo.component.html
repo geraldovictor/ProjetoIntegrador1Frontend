@@ -1,0 +1,45 @@
+<div class="main-content">
+  <h1 style="text-align: center; margin-top: 20px">Voo {{id}}</h1>
+  
+  <table>
+    <col>
+    <colgroup span="4"></colgroup>
+    <tr>
+      <th scope="col">Instante</th>
+      <th *ngFor="let instante of instantes; let i = index" scope="col">{{ i + 1 }}</th>
+    </tr>
+    <tr>
+      <th scope="row">Latitude</th>
+      <td *ngFor="let instante of instantes">{{ instante.latitude }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Longitude</th>
+      <td *ngFor="let instante of instantes">{{ instante.longitude }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Altitude</th>
+      <td *ngFor="let instante of instantes">{{ instante.altitude }}</td>
+    </tr>
+  </table>
+  
+  
+  
+  <section class="dados">
+    <div class="variaveis"></div>
+      <div class="dado-var"></div>
+      <div class="dado-var"></div>
+      <div class="dado-var"></div>
+      <div class="dado-var"></div>
+    <div class="estáticos">
+      <div class="dado-est">Peso: {{ peso }} kg</div>
+      <div class="dado-est">Pressão: {{ pressao }} psi</div>
+      <div class="dado-est">Ângulo de Lançamento: {{ angulo }} °</div>
+      <div class="dado-est">Distância: {{ distancia }} m</div>
+      <div class="dado-est">Volume: {{ volume }} ml</div>
+    </div>
+  </section>
+</div>
+
+<!-- <app-table></app-table> -->
+<!-- <app-grafico></app-grafico> -->
+    

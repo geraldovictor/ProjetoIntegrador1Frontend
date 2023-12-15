@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C8FF2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    height: 10vh;
+    background: linear-gradient(
+        90deg,
+        rgba(174, 193, 255, 1) 0%,
+        rgba(174, 25, 255, 1) 100%
+    );
+}
+
+/* .header h1{
+     text-align: center;
+    margin-top: 20px; 
+} */

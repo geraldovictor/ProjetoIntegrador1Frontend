@@ -1,6 +1,5 @@
-<div class="Block">
-  <p id="text-input">Registre um novo lançamento: </p>
-  <label id="lbl" for="input">Escolha o arquivo</label>
-  <input id="input" type='file' (change)="fileChanged($event)" style="display: none;" placeholder="X">
-  <button id="button" type="submit" (click)="uploadFile($event)">Enviar</button>
-</div>
+<app-header></app-header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<app-footer></app-footer>

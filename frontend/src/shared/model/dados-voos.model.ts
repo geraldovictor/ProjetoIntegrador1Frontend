@@ -1,27 +1,46 @@
-export interface IDadosVoo {
-    id?: number;
+export interface IVoo {
+    idVoo?: number;
+    volumeinicialAgua?: number;
+    pressaoInicial?: number;
+    pesoFoguete?: number;
+    pressaoBomba?: number;
+    anguloLancamento?: number;
+}
+export interface IInstante {
+    idInstante?: number;
+    tempo?: number;
     latitude?: string;
     longitude?: string;
     altitude?: string;
-    duracao_segundos?: number;
-    volume_agua?: string;
-    peso_foguete?: string;
-    pressao_bomba?: string;
-    angulo_lancamento?: string;
+    idVoo?: number;
+
 }
 
-export class DadosVoo implements IDadosVoo {
+export class Voo implements IVoo {
     constructor(
-        public id?: number,
-        public latitude?: string,
-        public longitude?: string,
-        public altitude?: string,
-        public duracao_segundos?: number,
-        public volume_agua?: string,
-        public peso_foguete?: string,
-        public pressao_bomba?: string,
-        public angulo_lancamento?: string
+        public idVoo?: number,
+        public volumeinicialAgua?: number,
+        public pressaoInicial?: number,
+        public pesoFoguete?: number,
+        public pressaoBomba?: number,
+        public anguloLancamento?: number,
     ) {
 
     }
 }
+
+export class Instante implements IInstante {
+    constructor(
+        public idInstante?: number,
+        public tempo?: number,
+        public latitude?: string,
+        public longitude?: string,
+        public altitude?: string,
+        public idVoo?: number,
+    ) {
+
+    }
+}
+
+
+
